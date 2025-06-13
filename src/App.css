@@ -1,43 +1,74 @@
 body {
-    font-family: "Mona Sans", sans-serif;
-    background-color: #F6F6F6;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 14px;
+  background-color: #f6f6f6;
+}
+.container {
+  width: 1024px;
+  margin: 5px auto;
 }
 
-.container {
-    width: 1024px;
-    margin: 5px auto;
+h1 {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  padding: 20px;
+}
+
+/* /////////////////////////////////////////////////////// H E A D E R ///////////////////////////////////////////////////////  */
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.login a {
+  text-decoration: none;
+  color: white;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    width: 500px;
-    height: 40px;
-    border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 500px;
+  height: 40px;
+  border-radius: 20px;
 }
 
 .login {
-    background-color: red;
-    width: 120px;
-    height: 40px;
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: red;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 section img {
-    width: 120px;
+  width: 120px;
 }
+
+/* /////////////////////////////////////////////////////// F I C H E  P E R S O ///////////////////////////////////////////////////////  */
+
+.personnage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid rgb(213, 213, 213);
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+}
+
