@@ -21,6 +21,12 @@ h1 {
   color: black;
 }
 
+.menu a:hover{
+   font-size: 20px;
+   font-weight: 700;
+   color: red;
+}
+
 .login a {
   text-decoration: none;
   color: white;
@@ -58,17 +64,70 @@ section img {
   width: 120px;
 }
 
-/* /////////////////////////////////////////////////////// F I C H E  P E R S O ///////////////////////////////////////////////////////  */
+.header input {
+border: none;
+font-size: 14px;
+}
+/* /////////////////////////////////////////////////////// P E R S O N N A G E S  &  C O M I C S  ///////////////////////////////////////////////////////  */
+
+.sectionPerso {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
 
 .personnage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   border: 2px solid rgb(213, 213, 213);
   width: 300px;
-  height: 250px;
+  height: 400px;
   border-radius: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
+.personnage img {
+    width: 216px;
+    height: 324px;
+    object-fit: cover;
+}
+
+.personnage a {
+  text-decoration: none !important;
+}
+
+.namePerso {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.descPerso {
+    font-style: italic;
+}
+
+/* /////////////////////////////////////////////////////// F I C H E  P E R S O  A V E C  BD  A S S O C I E E S ///////////////////////////////////////////////////////  */
+
+h2 {
+  padding: 20px 0;
+  font-weight: 600;
+}
+
+.comicPersoPage {
+  font-style: italic;
+  padding-bottom: 5px;
+}
+.comicsPerso {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.comicsPerso img {
+  width: 180px;
+}

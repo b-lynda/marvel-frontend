@@ -12,13 +12,13 @@ const Header = () => {
         </div>
         <div className="menu">
           <div>
-            <Link to="/personnages">Personnages</Link>
-          </div>
-          <div>
             <Link to="/comics">Comics</Link>
           </div>
           <div>
             <Link to="/favoris">Favoris</Link>
+          </div>
+          <div>
+            <input type="text" placeholder="Rechercher"/>
           </div>
         </div>
         <div className="login">

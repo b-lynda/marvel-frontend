@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ComicPerso from "./ComicPerso";
+import { Link } from "react-router-dom";
 
 const Personnages = () => {
   const [data, setData] = useState({});
@@ -25,14 +27,22 @@ const Personnages = () => {
   ) : (
     <>
       <Header />
-      <div>
-        {data.results.map((result, index) => {
+      <div className="sectionPerso">
+        {data.results.map((result) => {
           return (
-            <div key={result._id}>
-                <img src={result.thumbnail.path} alt="image personnage" />
-              <p>{result.name}</p>
-              <p>{result.description}</p>
-            </div>
+            <Link key={result._id} to={`/comics-perso/${result._id}`} element={<ComicPerso />} className="personnage">
+              <img
+                src={result.thumbnail.path + "." + result.thumbnail.extension}
+                alt="image personnage"
+              />
+              <p className="namePerso">{result.name}</p>
+              {result.description ? (
+                <p className="descPerso">{result.description}</p>
+              ) : (
+                <p>pas de description</p>
+              )}
+             
+            </Link>
           );
         })}
       </div>
