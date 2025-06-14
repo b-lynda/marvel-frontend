@@ -4,6 +4,14 @@ import axios from "axios";
 import ComicPerso from "./ComicPerso";
 import { Link } from "react-router-dom";
 
+  const formatString = (str) => {
+    if (str.length < 40) {
+      return str;
+    } else {
+      return str.slice(0, 40) + "...";
+    }
+  };
+
 const Personnages = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +45,7 @@ const Personnages = () => {
               />
               <p className="namePerso">{result.name}</p>
               {result.description ? (
-                <p className="descPerso">{result.description}</p>
+                <p className="descPerso">{formatString(result.description)}</p>
               ) : (
                 <p>pas de description</p>
               )}

@@ -2,6 +2,14 @@ import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+  const formatString = (str) => {
+    if (str.length < 10) {
+      return str;
+    } else {
+      return str.slice(0, 10) + "...";
+    }
+  };
+
 const Comics = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +43,7 @@ const Comics = () => {
               />
               <p className="namePerso">{result.title}</p>
               {result.description ? (
-                <p className="descPerso">{result.description}</p>
+                <p className="descPerso">{formatString(result.description)}</p>
               ) : (
                 <p>pas de description</p>
               )}
