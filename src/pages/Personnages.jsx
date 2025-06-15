@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ComicPerso from "./ComicPerso";
 import { Link } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
 
   const formatString = (str) => {
     if (str.length < 40) {
@@ -21,7 +22,7 @@ const Personnages = () => {
         const response = await axios.get(
           "https://my--marvel-backend--9gt8hqm44l5w.code.run/personnages"
         );
-        // console.log(response.data);
+      // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -34,6 +35,7 @@ const Personnages = () => {
     <p>Chargement ...</p>
   ) : (
     <>
+    
       <Header />
       <div className="sectionPerso">
         {data.results.map((result) => {
