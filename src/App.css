@@ -131,3 +131,47 @@ h2 {
 .comicsPerso img {
   width: 180px;
 }
+
+/* /////////////////////////////////////////////////////// L  O  G  I  N  ///////////////////////////////////////////////////////  */
+
+.secLogin {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 80px;
+}
+
+.loginDiv {
+  display: flex;
+  gap: 5px;
+}
+
+.loginDiv input {
+  border-radius: 5px;
+  border-style: none;
+  text-decoration: none;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 14px;
+  display: flex;
+}
+
+
+.loginDiv button {
+  border-radius: 5px;
+  border-style: none;
+  background-color: red;
+  color: white;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.loginDiv button:hover {
+  background-color: white;
+  color: red;
+}
+
+
+
+
